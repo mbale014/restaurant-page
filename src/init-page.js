@@ -114,14 +114,79 @@ export default function loadHome() {
     ourStoryDiv.appendChild(storyImg);
     ourStoryDiv.appendChild(paragraphDiv);
 
+    // --Testimonials--
+    const testimonialDiv = document.createElement('div');
+    testimonialDiv.id = 'testimonial';
+
+    const h2Testimonial = document.createElement('h2');
+    h2Testimonial.textContent = 'What our customer says';
+
+    const boxQuote = document.createElement('div');
+    boxQuote.classList.add('box-quote');
+
+    const quoteText = document.createElement('div');
+    quoteText.classList.add('quote-text');
+    const quotePara = document.createElement('p');
+    quotePara.textContent = 'Curabitur interdum posuere elementum. Aliquam et auctor turpis, sit amet porttitor nulla.In tellus metus, pretium non purus eu, vestibulum hendrerit orci. Integer vulputate quam non felis euismod tempor. Pellentesque sit amet elementum lorem, vitae semper odio. ';
+    const quotePerson = document.createElement('p');
+    quotePerson.textContent = 'Joh Doe - CEO of myBrand';
+
+    quoteText.appendChild(quotePara);
+    quoteText.appendChild(quotePerson)
+
+    const personImgDiv = document.createElement('div');
+    personImgDiv.classList.add('quote-person');
+    const personImg = document.createElement('img');
+    personImg.src = 'https://placehold.co/200x200';
+    personImg.alt = quotePerson.textContent;
+
+    personImgDiv.appendChild(personImg);
+
+    boxQuote.appendChild(quoteText)
+    boxQuote.appendChild(personImgDiv)
+
+    testimonialDiv.appendChild(h2Testimonial);
+    testimonialDiv.appendChild(boxQuote);
+
+    // --Location and contact
+    const myLocAndContact = [
+        {name: 'Address', desc: 'Integer vulputate quam non felis euismod tempor. Pellentesque sit amet elementum lorem, vitae semper odio. '},
+        {name: 'Opening', desc: 'Everyday - 11AM - 9PM'},
+        {name: 'Contact Number', desc: '+123456789'},
+    ]
+
+    const locAndContactDiv = document.createElement('div');
+    locAndContactDiv.id = 'loc-and-contact';
+
+    const h2LocAndContact = document.createElement('h2');
+    h2LocAndContact.textContent = 'Location and contact info';
+
+    locAndContactDiv.appendChild(h2LocAndContact);
+
+    myLocAndContact.forEach(info => {
+        const sectionLC = document.createElement('div');
+        sectionLC.classList.add('section');
+
+        const h3Name = document.createElement('h3');
+        h3Name.textContent = info.name;
+
+        const pDesc = document.createElement('p');
+        pDesc.textContent = info.desc;
+
+        sectionLC.appendChild(h3Name);
+        sectionLC.appendChild(pDesc);
+
+        locAndContactDiv.appendChild(sectionLC);
+    });
 
 
-    
 
     contentDiv.appendChild(heroDiv);
     contentDiv.appendChild(menuPreviewDiv);
     contentDiv.appendChild(ourStoryDiv);
+    contentDiv.appendChild(testimonialDiv);
+    contentDiv.appendChild(locAndContactDiv);
 
     document.body.appendChild(contentDiv);
 
-}
+};
