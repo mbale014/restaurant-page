@@ -48,18 +48,18 @@ export default function loadHome() {
 
     // --Menu Preview--
     const myMenu = [
-        {name: 'Maecenas blandit', desc: 'Lorem ipsum dolor sit amet', price: '$5.35', img: 'https://placehold.co/300x300'},
-        {name: 'metus ac ultrices', desc: 'consectetur adipiscing elit', price: '$8.75', img: 'https://placehold.co/300x300'},
-        {name: 'sapien nunc', desc: 'Morbi et rhoncus erat', price: '$12.15', img: 'https://placehold.co/300x300'},
-        {name: 'vehicula massa', desc: 'Class aptent taciti sociosqu ad litora', price: '$18.61', img: 'https://placehold.co/300x300'},
-        {name: 'hendrerit ante augue', desc: 'Sed rhoncus a lacus in venenatis', price: '$9.10', img: 'https://placehold.co/300x300'},
-        {name: 'Quisque dapibus', desc: 'Integer vel ultricies ex. Proin in massa lacus', price: '$4.95', img: 'https://placehold.co/300x300'},
+        {name: 'Classic cheeseburger', desc: 'Juicy beef patty, melted cheddar, fresh lettuce, tomato, and house sauce', price: '$9.35', img: 'https://img.freepik.com/free-photo/lateral-view-tasty-cheeseburger-white-table_23-2148374828.jpg'},
+        {name: 'Creamy alfredo pasta', desc: 'Fettuccine tossed in a creamy parmesan sauce with garlic and herbs', price: '$12.25', img: 'https://img.freepik.com/free-photo/plate-fettuccine-alfredo-with-fresh-parsley_9975-124881.jpghttps://img.freepik.com/free-photo/pasta-dish-restaurant-table_7939-2482.jpg'},
+        {name: 'Grilled Chicken Salad', desc: 'Tender grilled chicken over fresh greens, cherry tomatoes, and vinaigrette', price: '$10.88', img: 'https://img.freepik.com/free-photo/fresh-vegetable-salad-with-grilled-chicken-breast_2829-14105.jpg'},
+        {name: 'Double Beef Burger', desc: 'Two patties with melted cheese and smoky sauce', price: '$12.85', img: 'https://img.freepik.com/free-photo/tasty-sandwich-brown-wooden-cutting-board-ice-surface-with-free-space_179666-42261.jpg'},
+        {name: 'Spaghetti Bolognese', desc: 'Slow-cooked tomato & beef sauce with herbs', price: '$11.49', img: 'https://img.freepik.com/free-photo/pasta-fettuccine-bolognese-with-tomato-sauce-white-bowl_2829-20009.jpg'},
+        {name: 'Caesar Salad', desc: 'Romaine, parmesan, croutons, Caesar dressing', price: '$8.99', img: 'https://img.freepik.com/free-photo/grilled-caesar-salad_74190-932.jpg'},
     ];
 
     const menuPreviewDiv = document.createElement('div');
     menuPreviewDiv.id = 'menu-preview';
     const h2MenuTitle = document.createElement('h2');
-    h2MenuTitle.textContent = 'Check our menu';
+    h2MenuTitle.textContent = 'Check Our Menu';
 
     const menuCards = document.createElement('div');
     menuCards.id = 'cards';
@@ -95,32 +95,35 @@ export default function loadHome() {
     ourStoryDiv.id = 'our-story';
 
     const h2StoryTitle = document.createElement('h2');
-    h2StoryTitle.textContent = 'Our story';
+    h2StoryTitle.textContent = 'Our Story';
+
+    const storyContent = document.createElement('div')
+    storyContent.id = 'story-container'
 
     const storyImg = document.createElement('img');
-    storyImg.src = 'https://placehold.co/200x300';
+    storyImg.src = 'https://img.freepik.com/free-photo/restaurant-interior_1127-3394.jpg';
+    storyImg.alt = 'restaurant interior'
 
     const paragraphDiv = document.createElement('div');
     paragraphDiv.classList.add('paragraph');
 
-    const h3Story = document.createElement('h3');
-    h3Story.textContent = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English "
     const pStory = document.createElement('p');
-    pStory.textContent = "Curabitur interdum posuere elementum. Aliquam et auctor turpis, sit amet porttitor nulla. In tellus metus, pretium non purus eu, vestibulum hendrerit orci. Integer vulputate quam non felis euismod tempor";
+    pStory.textContent = "Our story began with a simple idea: serve delicious, honest food that feels like home. Every dish we make is crafted with fresh ingredients, a lot of care, and a passion for bringing people together through great meals";
 
-    paragraphDiv.appendChild(h3Story);
     paragraphDiv.appendChild(pStory);
 
+    storyContent.appendChild(paragraphDiv);
+    storyContent.appendChild(storyImg)
+
     ourStoryDiv.appendChild(h2StoryTitle);
-    ourStoryDiv.appendChild(storyImg);
-    ourStoryDiv.appendChild(paragraphDiv);
+    ourStoryDiv.appendChild(storyContent)
 
     // --Testimonials--
     const testimonialDiv = document.createElement('div');
     testimonialDiv.id = 'testimonial';
 
     const h2Testimonial = document.createElement('h2');
-    h2Testimonial.textContent = 'What our customer says';
+    h2Testimonial.textContent = 'What Our Customer Says';
 
     const boxQuote = document.createElement('div');
     boxQuote.classList.add('box-quote');
@@ -128,9 +131,10 @@ export default function loadHome() {
     const quoteText = document.createElement('div');
     quoteText.classList.add('quote-text');
     const quotePara = document.createElement('p');
-    quotePara.textContent = 'Curabitur interdum posuere elementum. Aliquam et auctor turpis, sit amet porttitor nulla.In tellus metus, pretium non purus eu, vestibulum hendrerit orci. Integer vulputate quam non felis euismod tempor. Pellentesque sit amet elementum lorem, vitae semper odio. ';
+    quotePara.textContent = '"I told myself Id only order one dish, then I left carrying three. The food was so good my diet unfriended me. Highly recommend, but dont blame me for your cravings. 10/10"';
     const quotePerson = document.createElement('p');
     quotePerson.textContent = 'Joh Doe - CEO of myBrand';
+    quotePerson.style.fontStyle = 'italic'
 
     quoteText.appendChild(quotePara);
     quoteText.appendChild(quotePerson)
@@ -138,7 +142,7 @@ export default function loadHome() {
     const personImgDiv = document.createElement('div');
     personImgDiv.classList.add('quote-person');
     const personImg = document.createElement('img');
-    personImg.src = 'https://placehold.co/200x200';
+    personImg.src = 'https://img.freepik.com/free-photo/handsome-brunette-man-with-beard-looking_176420-20040.jpg';
     personImg.alt = quotePerson.textContent;
 
     personImgDiv.appendChild(personImg);
@@ -151,7 +155,7 @@ export default function loadHome() {
 
     // --Location and contact
     const myLocAndContact = [
-        {name: 'Address', desc: 'Integer vulputate quam non felis euismod tempor. Pellentesque sit amet elementum lorem, vitae semper odio. '},
+        {name: 'Address', desc: '460 Hyde Park Corner, Wellington Arch, Greater London, London'},
         {name: 'Opening', desc: 'Everyday - 11AM - 9PM'},
         {name: 'Contact Number', desc: '+123456789'},
     ]
@@ -160,9 +164,12 @@ export default function loadHome() {
     locAndContactDiv.id = 'loc-and-contact';
 
     const h2LocAndContact = document.createElement('h2');
-    h2LocAndContact.textContent = 'Location and contact info';
+    h2LocAndContact.textContent = 'Location and Contact Info';
 
     locAndContactDiv.appendChild(h2LocAndContact);
+
+    const sections = document.createElement('div');
+    sections.id = 'sections';
 
     myLocAndContact.forEach(info => {
         const sectionLC = document.createElement('div');
@@ -177,10 +184,10 @@ export default function loadHome() {
         sectionLC.appendChild(h3Name);
         sectionLC.appendChild(pDesc);
 
-        locAndContactDiv.appendChild(sectionLC);
+        sections.appendChild(sectionLC);
     });
 
-
+    locAndContactDiv.appendChild(sections);
 
     contentDiv.appendChild(heroDiv);
     contentDiv.appendChild(menuPreviewDiv);

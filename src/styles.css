@@ -76,6 +76,8 @@ button {
   border: transparent;
 }
 
+/* --Nav-bar-- */
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -97,11 +99,15 @@ nav button:hover {
     cursor: pointer;
 }
 
+/* Content container */
+
 div#content {
   display: flex;
   flex-direction: column;
-  gap: 5vh
+  gap: 8vh
 }
+
+/* --Hero-- */
 
 #content #hero {
   display: flex;
@@ -165,5 +171,108 @@ div#content {
   width: 100%;
   height: auto;
   object-fit: cover;
+}
+
+/* --Menu-preview */
+
+#menu-preview > h2 {
+  text-align: start;
+  margin-bottom: 1.5em;
+  font-size: 2em;
+}
+
+#cards  {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  column-gap: 0.3em;
+  row-gap: 2em;
+  margin: 0 auto;
+}
+
+.card > * {
+  margin-bottom: 0.6em;
+  max-width: 300px;
+}
+
+
+.card > img:hover {
+  filter: brightness(75%);
+  cursor: pointer;
+}
+
+/* Our story */
+#our-story> h2 {
+  font-size: 2em;
+}
+
+#story-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2em
+}
+
+#story-container > div {
+  flex:1;
+  max-width: 700px;
+}
+
+#story-container p {
+  font-size: 1.4em;
+  font-weight: 300;
+}
+
+#story-container img {
+  flex:1;
+  max-width: 500px;
+}
+
+/* --Testimonial-- */
+#testimonial h2 {
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+
+.box-quote {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2em;
+  background-color: hsl(0 0 100%);
+  padding: 40px 40px;
+  border-radius: var(--img-border-radius);
+}
+
+.quote-text {
+  display:flex;
+  flex-direction: column;
+  gap: 3em;
+  max-width: 700px;
+  font-size: 1.5rem;
+}
+
+.quote-text p:first-child {
+  font-weight: 300;
+}
+
+.quote-person img {
+  max-width: 400px;
+}
+
+/* --Location and contact-- */
+
+#loc-and-contact > h2 {
+  margin-bottom: 1.5em;
+  font-size: 2em;
+}
+
+#sections {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+}
+
+#sections h3 {
+  margin-bottom: 0.5em;
 }
 
