@@ -76,6 +76,7 @@ button {
   border: transparent;
 }
 
+/* === Home page=== */
 /* --Nav-bar-- */
 
 nav {
@@ -130,17 +131,20 @@ div#content {
   font-size: 2.4em
 }
 
-.headline > div button {
+.headline > div button,
+#hero-menu-text button {
   font-size: 1.3em;
   padding: 10px 20px;
   border-radius: var(--btn-border-radius)
 }
 
-.headline > div button:hover {
+.headline > div button:hover,
+#hero-menu-text button:hover {
   cursor: pointer;
 }
 
-.headline > div button:first-child {
+.headline > div button:first-child,
+#hero-menu-text button {
   background-color: var(--primary-color);
   color: hsl(0 0 100%);
   margin-right: 0.6em;
@@ -148,7 +152,8 @@ div#content {
   
 }
 
-.headline > div button:first-child:hover {
+.headline > div button:first-child:hover,
+#hero-menu-text button:hover {
   background-color: var(--primary-darker);
 }
 
@@ -276,3 +281,33 @@ div#content {
   margin-bottom: 0.5em;
 }
 
+/* ===Menu page=== */
+/* Hero section */
+
+#hero-menu {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://i.ibb.co.com/7tV238Mv/2149209220.jpg");
+  height: 40vh;
+  border-radius: var(--img-border-radius);
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover ;
+  position: relative;
+}
+
+#hero-menu-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+}
+
+#hero-menu-text h1 {
+  font-size: 4em;
+}
+
+#hero-menu-text > * {
+  margin-bottom: 1.5rem;
+}
