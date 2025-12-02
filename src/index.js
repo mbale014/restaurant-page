@@ -1,6 +1,7 @@
 import "./styles.css";
-import loadHome from "./init-page.js"
+import loadHome from "./init-page.js";
 import loadMenu from "./menu-page.js";
+import loadAbout from "./about-page.js"
 
 //Initial page load
 loadPage('home')
@@ -12,7 +13,10 @@ function loadPage(tab) {
 
     } else if (tab.toLowerCase() === 'menu') {
         loadMenu();
-    };
+    } else if (tab.toLowerCase() === 'about') {
+        loadAbout();
+        return;
+    }
 
     const orderNowBtn = document.querySelector('.order-btn');
     orderNowBtn.addEventListener('click', () => {
@@ -25,11 +29,15 @@ const homeBtn = document.querySelector('#nav-btn > button:first-child');
 homeBtn.addEventListener('click', () => loadPage('home'))
 
 // Event listener to menu button and view menu for menu page
-const menuBtn = document.querySelector('#nav-btn > button:nth-child(2n)')
+const menuBtn = document.querySelector('#nav-btn > button:nth-child(2)')
 menuBtn.addEventListener('click', () => loadPage('menu'))
 
 const viewMenuBtn = document.querySelector('.headline > div > button:last-child');
 viewMenuBtn.addEventListener('click', () => loadPage('menu'));
+
+// Event listener to about button for about page
+const aboutBtn = document.querySelector('#nav-btn > button:last-child')
+aboutBtn.addEventListener('click', () => loadPage('about'))
 
 
 console.log("Hello, world!!")

@@ -350,3 +350,10 @@ div#content {
   height: 200px;
   margin: 0 auto;
 }
+
+/* ==About page== */
+/* --Hero-- */
+
+.about-hero-text > p {
+  font-size: 1.3rem;
+}
