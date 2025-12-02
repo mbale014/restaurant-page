@@ -11,6 +11,8 @@ function loadPage(tab) {
     if (tab.toLowerCase() === 'home') {
         loadHome();
 
+        const viewMenuBtn = document.querySelector('.headline > div > button:last-child');
+        viewMenuBtn.addEventListener('click', () => loadPage('menu'));
     } else if (tab.toLowerCase() === 'menu') {
         loadMenu();
     } else if (tab.toLowerCase() === 'about') {
@@ -31,9 +33,6 @@ homeBtn.addEventListener('click', () => loadPage('home'))
 // Event listener to menu button and view menu for menu page
 const menuBtn = document.querySelector('#nav-btn > button:nth-child(2)')
 menuBtn.addEventListener('click', () => loadPage('menu'))
-
-const viewMenuBtn = document.querySelector('.headline > div > button:last-child');
-viewMenuBtn.addEventListener('click', () => loadPage('menu'));
 
 // Event listener to about button for about page
 const aboutBtn = document.querySelector('#nav-btn > button:last-child')
