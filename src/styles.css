@@ -280,6 +280,10 @@ div#content {
 
 /* --Location and contact-- */
 
+#loc-and-contact {
+  padding-bottom: 4em;
+}
+
 #loc-and-contact > h2 {
   margin-bottom: 1.5em;
   font-size: 2em;
