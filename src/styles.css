@@ -311,3 +311,35 @@ div#content {
 #hero-menu-text > * {
   margin-bottom: 1.5rem;
 }
+
+#menus-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+  gap: 2em;
+}
+
+.menu-grid {
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap:1em
+}
+
+.menu-card {
+  background-color: #fff;
+  border-radius: var(--img-border-radius);
+  min-height: 350px;
+}
+
+.card-content {
+  padding: 0.6em 0 1.5em 1em
+}
+
+.card-image {
+  margin: auto;
+}
+
+.card-image img {
+  max-width: 300px;
+  height: 200px;
+  margin: 0 auto;
+}

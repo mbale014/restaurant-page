@@ -47,10 +47,31 @@ export default function loadMenu() {
 
         const h2Section = document.createElement('h2');
         h2Section.textContent = section.category;
-
         menuSection.appendChild(h2Section);
 
+        const menuGridDiv = document.createElement('div');
+        menuGridDiv.classList.add('menu-grid');
 
+        section.items.forEach(item => {
+            const cardMenu = document.createElement('div');
+            cardMenu.classList.add('menu-card');
+
+            // Using Template Literals to build the card HTML
+            cardMenu.innerHTML = `
+                <div class="card-image">
+                <img src="${item.image}" alt="${item.name}-img">
+                </div>
+                <div class="card-content">
+                <h3>${item.name}</h3>
+                <p>${item.desc}</p>
+                <span class="price">${item.price}</span>
+                </div>
+            `;
+
+            menuGridDiv.appendChild(cardMenu);
+        })
+
+        menuSection.appendChild(menuGridDiv)
         menusContainer.appendChild(menuSection)
     })
 
