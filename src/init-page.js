@@ -24,6 +24,7 @@ export default function loadHome() {
 
     const cta = document.createElement('div');
     const btnOrder = document.createElement('button');
+    btnOrder.classList.add('order-btn');
     btnOrder.textContent = 'Order Now';
     const btnView = document.createElement('button');
     btnView.textContent = 'View Menu';

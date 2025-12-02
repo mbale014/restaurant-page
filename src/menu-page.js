@@ -23,6 +23,7 @@ export default function loadMenu() {
     const pDesc = document.createElement('p');
     pDesc.textContent = 'Explore our full range of fresh, delicious offerings';
     const cta = document.createElement('button');
+    cta.classList.add('order-btn');
     cta.textContent = 'Order Now';
 
     heroText.appendChild(h1Hero);
@@ -64,7 +65,7 @@ export default function loadMenu() {
                 <div class="card-content">
                 <h3>${item.name}</h3>
                 <p>${item.desc}</p>
-                <span class="price">${item.price}</span>
+                <h3 class="price">${item.price}</h3>
                 </div>
             `;
 
