@@ -133,12 +133,16 @@ export default function loadHome() {
     quoteText.classList.add('quote-text');
     const quotePara = document.createElement('p');
     quotePara.textContent = '"I told myself Id only order one dish, then I left carrying three. The food was so good my diet unfriended me. Highly recommend, but dont blame me for your cravings. 10/10"';
+    const quotePersonLink = document.createElement('a');
+    quotePersonLink.href = 'https://github.com/mbale014/';
     const quotePerson = document.createElement('p');
-    quotePerson.textContent = 'Joh Doe - CEO of myBrand';
+    quotePerson.textContent = 'Iqbal - CEO of myBrand';
     quotePerson.style.fontStyle = 'italic'
 
+    quotePersonLink.appendChild(quotePerson);
+
     quoteText.appendChild(quotePara);
-    quoteText.appendChild(quotePerson)
+    quoteText.appendChild(quotePersonLink)
 
     const personImgDiv = document.createElement('div');
     personImgDiv.classList.add('quote-person');

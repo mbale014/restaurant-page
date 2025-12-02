@@ -90,6 +90,11 @@ button {
   border: transparent;
 }
 
+a{
+  text-decoration: none;
+  color: var(--dark-text)
+}
+
 /* === Home page=== */
 /* --Nav-bar-- */
 
