@@ -38,7 +38,7 @@ export default function loadHome() {
     const heroImgDiv = document.createElement('div');
     heroImgDiv.id = 'hero-img';
     const heroImg = document.createElement('img');
-    heroImg.src = 'https://images.unsplash.com/photo-1571091655789-405eb7a3a3a8?q=80&w=500&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D';
+    heroImg.src = 'https://i.ibb.co.com/hF1vNp7c/ilya-mashkov-mk-Va2h-LJgn-I-unsplash-1.jpg';
     heroImg.alt = 'hero-image';
 
     heroImgDiv.appendChild(heroImg)
@@ -48,12 +48,12 @@ export default function loadHome() {
 
     // --Menu Preview--
     const myMenu = [
-        {name: 'Classic cheeseburger', desc: 'Juicy beef patty, melted cheddar, fresh lettuce, tomato, and house sauce', price: '$9.35', img: 'https://img.freepik.com/free-photo/lateral-view-tasty-cheeseburger-white-table_23-2148374828.jpg'},
-        {name: 'Creamy alfredo pasta', desc: 'Fettuccine tossed in a creamy parmesan sauce with garlic and herbs', price: '$12.25', img: 'https://img.freepik.com/free-photo/plate-fettuccine-alfredo-with-fresh-parsley_9975-124881.jpghttps://img.freepik.com/free-photo/pasta-dish-restaurant-table_7939-2482.jpg'},
-        {name: 'Grilled Chicken Salad', desc: 'Tender grilled chicken over fresh greens, cherry tomatoes, and vinaigrette', price: '$10.88', img: 'https://img.freepik.com/free-photo/fresh-vegetable-salad-with-grilled-chicken-breast_2829-14105.jpg'},
-        {name: 'Double Beef Burger', desc: 'Two patties with melted cheese and smoky sauce', price: '$12.85', img: 'https://img.freepik.com/free-photo/tasty-sandwich-brown-wooden-cutting-board-ice-surface-with-free-space_179666-42261.jpg'},
-        {name: 'Spaghetti Bolognese', desc: 'Slow-cooked tomato & beef sauce with herbs', price: '$11.49', img: 'https://img.freepik.com/free-photo/pasta-fettuccine-bolognese-with-tomato-sauce-white-bowl_2829-20009.jpg'},
-        {name: 'Caesar Salad', desc: 'Romaine, parmesan, croutons, Caesar dressing', price: '$8.99', img: 'https://img.freepik.com/free-photo/grilled-caesar-salad_74190-932.jpg'},
+        {name: 'Classic cheeseburger', desc: 'Juicy beef patty, melted cheddar, fresh lettuce, tomato, and house sauce', price: '$9.35', img: 'https://i.ibb.co.com/B2krwPNR/2148374828.jpg'},
+        {name: 'Creamy alfredo pasta', desc: 'Fettuccine tossed in a creamy parmesan sauce with garlic and herbs', price: '$12.25', img: 'https://i.ibb.co.com/XxmBT2Yx/2482.jpg'},
+        {name: 'Grilled Chicken Salad', desc: 'Tender grilled chicken over fresh greens, cherry tomatoes, and vinaigrette', price: '$10.88', img: 'https://i.ibb.co.com/qLMf3fbm/14105.jpg'},
+        {name: 'Double Beef Burger', desc: 'Two patties with melted cheese and smoky sauce', price: '$12.85', img: 'https://i.ibb.co.com/84fPbmFr/42261.jpg'},
+        {name: 'Spaghetti Bolognese', desc: 'Slow-cooked tomato & beef sauce with herbs', price: '$11.49', img: 'https://i.ibb.co.com/S4mTw5Dr/50.jpg'},
+        {name: 'Caesar Salad', desc: 'Romaine, parmesan, croutons, Caesar dressing', price: '$8.99', img: 'https://i.ibb.co.com/bjQv1dWG/932.jpg'},
     ];
 
     const menuPreviewDiv = document.createElement('div');
@@ -101,7 +101,7 @@ export default function loadHome() {
     storyContent.id = 'story-container'
 
     const storyImg = document.createElement('img');
-    storyImg.src = 'https://img.freepik.com/free-photo/restaurant-interior_1127-3394.jpg';
+    storyImg.src = 'https://i.ibb.co.com/zhhtw1Cn/3394.jpg';
     storyImg.alt = 'restaurant interior'
 
     const paragraphDiv = document.createElement('div');
@@ -142,7 +142,7 @@ export default function loadHome() {
     const personImgDiv = document.createElement('div');
     personImgDiv.classList.add('quote-person');
     const personImg = document.createElement('img');
-    personImg.src = 'https://img.freepik.com/free-photo/handsome-brunette-man-with-beard-looking_176420-20040.jpg';
+    personImg.src = 'https://i.ibb.co.com/1GML5g6Z/20040.jpg';
     personImg.alt = quotePerson.textContent;
 
     personImgDiv.appendChild(personImg);
